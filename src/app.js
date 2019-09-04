@@ -52,13 +52,13 @@ app.get('/weather', (req, res) => {
         if (error) {
             return res.send({error: error})
         }
-        forecast(lattitude, longitude, (error, { summary, temperature, precipProbability, preciptype }={}) => {
+        forecast(lattitude, longitude, (error, { summary, temperature, precipProbability, precipType }={}) => {
             if (!error) {
                 res.send({
-                    placeneme: placeName,
+                    placename: placeName,
                     summary: summary,
                     temperature: temperature,
-                    preciptype: preciptype,
+                    preciptype: precipType,
                     precipProbability: precipProbability
                 })
                 
