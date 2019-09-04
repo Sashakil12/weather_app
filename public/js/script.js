@@ -26,7 +26,7 @@ form.addEventListener('submit',(e)=>{
                 msg2.textContent = 'It\'s ' + data.summary;
                 msg3.textContent = 'Temperature is '+ data.temperature +' degree celcius';
                 if(data.preciptype){
-                    return msg4.textContent = 'There is a ' + data.precipProbability +'% chance of "' + data.preciptype+'"';
+                    return msg4.textContent = 'There is a ' + (data.precipProbability*100) +'% chance of "' + data.preciptype+'"';
                 }
                 msg4.textContent = 'There is a ' + data.precipProbability + '% chance of the weather to change within next 24 hours';
 
