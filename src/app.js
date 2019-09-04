@@ -30,7 +30,7 @@ app.get('/help', (req, res) => {
     })
 });
 app.get('/about', (req, res) => {
-    res.render('About', {
+    res.render('about', {
         title: 'About us',
         header: 'Know about us',
         name: 'Shakil'
