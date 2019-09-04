@@ -28,7 +28,7 @@ form.addEventListener('submit',(e)=>{
                 if(data.preciptype){
                     return msg4.textContent = 'There is a ' + (data.precipProbability*100) +'% chance of "' + data.preciptype+'"';
                 }
-                msg4.textContent = 'There is a ' + data.precipProbability + '% chance of the weather to change within next 24 hours';
+                msg4.textContent = 'There is a ' + (data.precipProbability*100) + '% chance of the weather to change within next 24 hours';
 
             }
         })
