@@ -1,9 +1,10 @@
 const express = require('express');
-const app = express();
 const hbs = require('hbs');
 const path = require('path');
 const geocode = require('./utils/geocode');
-const forecast = require('./utils/forecast')
+const forecast = require('./utils/forecast');
+const app = express();
+const port = process.env.PORT || 3000;
 // if we own the following domain app.com
 //we have routes like app.com, app.com/help, app.com/about
 const viewDirectory = path.join(__dirname, '../templates/views')
@@ -77,6 +78,6 @@ app.get('/*', (req, res) => {
         rescue: '/'
     })
 })
-app.listen('3000', () => {
-    console.log('Alive')
+app.listen(port, () => {
+    console.log('Alive @', port)
 })
