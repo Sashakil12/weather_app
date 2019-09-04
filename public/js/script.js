@@ -1,6 +1,3 @@
-console.log('connected');
-
-
 const data = document.querySelector('#data')
 const loader = document.querySelector('.lds-ellipsis');
 const msg1 =    document.querySelector('#msg-1');
@@ -20,12 +17,10 @@ form.addEventListener('submit',(e)=>{
     fetch(url).then((response) => {
         response.json().then((data) => {
             if (data.error) {
-                
                 msg1.textContent = data.error;
                 msg2.textContent = '';
                 msg2.style.display = 'none';
-            }else{
-                
+            }else{ 
                 msg1.textContent = 'Showing results for: ' +data.placeneme;
                 msg2.style.display = 'block';
                 msg2.textContent = 'It\'s ' + data.summary;
